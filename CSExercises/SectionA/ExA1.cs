@@ -19,7 +19,7 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            //YOUR CODE HERE
+            Console.WriteLine("Wai Yan Oo\ne0046649@u.nus.edu");
         }
     }
 }
