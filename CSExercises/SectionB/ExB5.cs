@@ -24,7 +24,7 @@ namespace CSExercises
 
         public static double CalculateY(double x)
         {
-            double y = 5 * x * 2 - 4 * x + 3;
+            double y = 5 * Math.Pow(x,2)- (4 * x) + 3;
             return y;
         }
     }
