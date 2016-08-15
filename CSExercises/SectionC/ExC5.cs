@@ -17,15 +17,34 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            //YOUR CODE HERE
+            Console.Write("Please enter 3 Digit integer");
+            int n = Convert.ToInt32(Console.ReadLine());
+            if (IsArmstrongNumber(n))
+            {
+                Console.WriteLine("True");
+            }
+            else
+            {
+                Console.WriteLine("False");
+            }
 
         }
 
 
         public static bool IsArmstrongNumber(int n)
         {
-            //YOUR CODE HERE
-            return false;
+            bool r = false;
+            int firstdig = n / 100;
+            int seconddig = (n / 10)%10;
+            int lastdig = n % 10;
+            double checkno = Math.Pow(firstdig, 3) + Math.Pow(seconddig, 3) + Math.Pow(lastdig, 3);
+            Console.WriteLine(checkno);
+            if (checkno == n)
+            {
+                r = true;
+            }
+            else r = false;
+            return r;
 
         }
     }

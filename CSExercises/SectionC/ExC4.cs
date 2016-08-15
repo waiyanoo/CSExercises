@@ -20,17 +20,29 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-
-            //Your code here
-
-
-
+            Console.WriteLine("Input Distance");
+            double distance = Convert.ToDouble(Console.ReadLine());
+            double Distance = Math.Ceiling(distance * 10) / 10;
+            Console.WriteLine("{0}", CalculateFare(Distance));
+            
         }
 
         public static double CalculateFare(double distance)
         {
-            //YOUR CODE HERE
-            return 0;
+            double totalfare = 0;
+            if(distance >=0 && distance <= 0.5)
+            {
+                totalfare = 2.4;
+            }
+            else if(distance >0.5 && distance <= 8.5)
+            {
+                totalfare = ((distance - 0.5) * 0.4) + 2.4;
+            }
+            else
+            {
+                totalfare = (8.5  * 0.4) + ((distance - 9) * 0.5 )+ 2.4;
+            }
+            return totalfare;
 
 
 

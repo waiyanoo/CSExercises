@@ -25,8 +25,7 @@ namespace CSExercises
         public static double CalculateFare(double distance)
         {
             double fare = 2.4 + distance * 0.4;
-            double roundvalue = Math.Pow(10, 1);
-            return Math.Ceiling(fare * roundvalue) / roundvalue;
+            return Math.Ceiling(fare * 10) / 10;
             
         }
         
