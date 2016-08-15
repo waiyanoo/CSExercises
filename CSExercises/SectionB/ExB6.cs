@@ -24,12 +24,12 @@ namespace CSExercises
             double x2 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Input coordinates number for Y2");
             double y2 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("The distance is {0}", CalculateDistance(x1, y1, x2, y2));
+            Console.WriteLine("{0}", CalculateDistance(x1, y1, x2, y2));
         }
 
         public static double CalculateDistance(double x1, double y1, double x2, double y2)
         {
-            double distance = Math.Sqrt((x2 - x1) * 2 + (y2 - y1) * 2);
+            double distance = Math.Sqrt(Math.Pow((x2 - x1),2) + Math.Pow((y2 - y1),2));
             return distance;
         }
     }

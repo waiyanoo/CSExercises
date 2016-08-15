@@ -18,7 +18,7 @@ namespace CSExercises
         {
             Console.WriteLine("Input Distance");
             double distance = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Total fare is {0:#.#}", CalculateFare(distance));
+            Console.WriteLine("{0:#.#}", CalculateFare(distance));
             
         }
 

@@ -19,16 +19,16 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             String inputsalary = Console.ReadLine();
-            String totalincome = CalculateIncome(inputsalary);
-            Console.WriteLine("Total Income is {0}", totalincome);
+            double totalincome = CalculateIncome(inputsalary);
+            Console.WriteLine("{0:c}", totalincome);
         }
 
-        public static string CalculateIncome(string salaryStr)
+        public static double CalculateIncome(string salaryStr)
         {
             double salary = Convert.ToDouble(salaryStr);
             double housing = salary * 0.10;
             double transport = salary * 0.03;
-            String totalsalary = (salary + housing + transport).ToString();
+            double totalsalary = (salary + housing + transport);
             return totalsalary;
         }
     }
